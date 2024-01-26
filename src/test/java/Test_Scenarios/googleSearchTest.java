@@ -39,35 +39,37 @@ public class googleSearchTest {
         googleSearchPage.clickFirstLink();
     }
 
-    @Test(priority = 3 , enabled = false)
+    @Test(priority = 3 )
     public void navigateToSearchedWebsite() {
-        googleSearchPage.clickCookieBtn();
+        googleSearchPage.banner();
     }
 
-    @Test(priority = 4 , enabled = false)
-    public void navigateToLoginPage() {
-        Assert.assertEquals(googleSearchPage.loginPageTitle(), "Login", "Page title is not 'Login'");
-    }
+        @Test(priority = 4)
+        public void navigateToLoginPage() {
+            Assert.assertEquals(googleSearchPage.loginPageTitle(), "Login", "Page title is not 'Login'");
+        }
+/*
+            @Test(priority = 5 )
+            public void manageCookies() {
+                googleSearchPage_ManageCookies.clickManageCookieBtn();
+            }
 
-    @Test(priority = 5 )
-    public void manageCookies() {
-        googleSearchPage_ManageCookies.clickManageCookieBtn();
-    }
+            @Test(priority = 6 )
+            public void policyLinkUrlValidation() {
+                String expectedUrl = "https://www.economistgroup.com/privacy-policy";
+                String actualUrl = googleSearchPage_ManageCookies.publicPolicyLinkChecking();
+                Assert.assertEquals(actualUrl, expectedUrl, "Actual URL does not match the expected URL");
+            }
 
-    @Test(priority = 6 )
-    public void policyLinkUrlValidation() {
-        String expectedUrl = "https://www.economistgroup.com/privacy-policy";
-        String actualUrl = googleSearchPage_ManageCookies.publicPolicyLinkChecking();
-        Assert.assertEquals(actualUrl, expectedUrl, "Actual URL does not match the expected URL");
-    }
-
-    @Test(priority = 7 )
-    public void saveAndClose() {
-        googleSearchPage_ManageCookies.saveAndClose();
-    }
-
+            @Test(priority = 7 )
+            public void saveAndClose() {
+                googleSearchPage_ManageCookies.saveAndClose();
+            }
+*/
     @AfterTest
     public void afterTest() {
         driver.quit();
     }
+
+
 }

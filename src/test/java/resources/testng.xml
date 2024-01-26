@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+    <listeners>
+        <listener class-name="Test_Scenarios.TestListener" />
+    </listeners>
+    <test name="MyTestCase">
+        <classes>
+            <class name="Test_Scenarios.googleSearchTest" />
+        </classes>
+    </test>
+</suite>

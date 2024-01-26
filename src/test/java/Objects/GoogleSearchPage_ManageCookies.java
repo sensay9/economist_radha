@@ -74,6 +74,7 @@ public class GoogleSearchPage_ManageCookies {
 
     public void saveAndClose() {
         driver.switchTo().window(mainWindowHandle);
+       // driver.switchTo().window(mainWindowHandle);
         WebElement iframeElement2 = driver.findElement(manageCookieBanner);
         driver.switchTo().frame(iframeElement2);
         WebElement saveClose_Button = wait.until(ExpectedConditions.elementToBeClickable(saveAndCloseBtn));
